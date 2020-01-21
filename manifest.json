@@ -1,0 +1,27 @@
+{
+  "name": "Politeia Identity Manager",
+  "version": "1.0",
+  "description": "Store your Politeia identity conveniently!",
+  "permissions": [ "activeTab", "declarativeContent", "storage" ],
+  "background": {
+    "scripts": [ "background.js" ],
+    "persistent": false
+  },
+  "options_page": "options.html",
+  "page_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/politeialogo16.png",
+      "32": "images/politeialogo32.png",
+      "48": "images/politeialogo48.png",
+      "128": "images/politeialogo128.png"
+    }
+  },
+  "icons": {
+    "16": "images/politeialogo16.png",
+    "32": "images/politeialogo32.png",
+    "48": "images/politeialogo48.png",
+    "128": "images/politeialogo128.png"
+  },
+  "manifest_version": 2
+}
