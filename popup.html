@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <style>
-            /*button {
-                height: 30px;
-                width: 30px;
-                outline: none;
-            }*/
-        </style>
-    </head>
-    <body>
-        <form>
-            Public Key: <input type="text" />
-            Private Key: <input type="text" />
-            Password: <input type="text" />            
-            <input type="submit" value="Save" />
-        </form>
-        <!--<script src="popup.js"></script>-->
-    </body>
+<head>
+    <style>
+    </style>
+    <script src="crypto.js"></script>
+    <script src="popup.js"></script>
+</head>
+<body>
+    <div class="keys">
+        <p>Download your identity and save it somewhere safe! <br /> Paste your keys from the file to below.</p>
+        Public Key:
+        <input id="pubKey" type="text" name="pubKey" minlength="64" maxlength="64" placeholder="64 characters" required/>
+        Private Key:
+        <input id="privKey" type="text" name="privKey" minlength="128" maxlength="128" placeholder="128 characters" required/>
+    </div>
+    <p class="stored" style="display:none">Identity Stored! <br /> Reset stored key from extension <a href="options.html" target="_blank">options</a>.</p>
+    Password:
+    <input id="password" type="password" minlength="1" />
+    <input id="showpassword" type="checkbox" />Show Password
+    <button class="keys" id="savebtn" type="submit" disabled>Save</button>
+    <button class="stored" id="importbtn" style="display:none">Import</button>
+</body>
 </html>

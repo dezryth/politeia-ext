@@ -1,27 +1,36 @@
 {
   "name": "Politeia Identity Manager",
-  "version": "1.0",
-  "description": "Store your Politeia identity conveniently!",
+  "short_name": "PiD Manager",
+  "version": "0.0.2",
+  "author": "Scott Christian",
+  "description": "Store your Decred Politeia identity conveniently!",
   "permissions": [ "activeTab", "declarativeContent", "storage" ],
   "background": {
     "scripts": [ "background.js" ],
     "persistent": false
   },
+  "content_scripts": [
+    {
+      "matches": [ "https://proposals.decred.org/user/*" ],
+      "run_at": "document_idle",
+      "js": [ "crypto.js", "content.js" ]
+    }
+  ],
   "options_page": "options.html",
   "page_action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "images/politeialogo16.png",
-      "32": "images/politeialogo32.png",
-      "48": "images/politeialogo48.png",
-      "128": "images/politeialogo128.png"
+      "16": "images/pidlogo16.png",
+      "32": "images/pidlogo32.png",
+      "48": "images/pidlogo48.png",
+      "128": "images/pidlogo128.png"
     }
   },
   "icons": {
-    "16": "images/politeialogo16.png",
-    "32": "images/politeialogo32.png",
-    "48": "images/politeialogo48.png",
-    "128": "images/politeialogo128.png"
+    "16": "images/pidlogo16.png",
+    "32": "images/pidlogo32.png",
+    "48": "images/pidlogo48.png",
+    "128": "images/pidlogo128.png"
   },
   "manifest_version": 2
 }
