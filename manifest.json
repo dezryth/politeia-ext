@@ -1,10 +1,10 @@
 {
   "name": "Politeia Identity Manager",
   "short_name": "PiD Manager",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Scott Christian",
   "description": "Store your Decred Politeia identity conveniently!",
-  "permissions": [ "activeTab", "declarativeContent", "storage" ],
+  "permissions": [ "activeTab", "declarativeContent", "storage", "clipboardWrite" ],
   "background": {
     "scripts": [ "background.js" ],
     "persistent": false
@@ -12,7 +12,7 @@
   "content_scripts": [
     {
       "matches": [ "https://proposals.decred.org/user/*" ],
-      "run_at": "document_idle",
+      "run_at": "document_start",
       "js": [ "crypto.js", "content.js" ]
     }
   ],

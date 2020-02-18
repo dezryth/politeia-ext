@@ -5,6 +5,7 @@
     </style>
     <script src="crypto.js"></script>
     <script src="popup.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"></link>
 </head>
 <body>
     <div class="keys">
@@ -14,11 +15,25 @@
         Private Key:
         <input id="privKey" type="text" name="privKey" minlength="128" maxlength="128" placeholder="128 characters" required/>
     </div>
-    <p class="stored" style="display:none">Identity Stored! <br /> Reset stored key from extension <a href="options.html" target="_blank">options</a>.</p>
-    Password:
-    <input id="password" type="password" minlength="1" />
-    <input id="showpassword" type="checkbox" />Show Password
-    <button class="keys" id="savebtn" type="submit" disabled>Save</button>
-    <button class="stored" id="importbtn" style="display:none">Import</button>
+    <p class="stored" style="display:none"><b>Identity Stored!</b>
+        <br /> 
+        Reset stored key from <a href="options.html" target="_blank">options</a>.
+    </p>
+    <div class="locked">
+        Password:
+        <input id="password" type="password" minlength="1" />
+        <input id="showPassword" type="checkbox" />Show Password
+        <br />
+    </div>
+    <div class="copyKeys">        
+        <img src="images/stakey.png" alt="Stakey">
+        <button id="copyPubKey">Copy Public Key</button>        
+        <button id="copyPrivKey">Copy Private Key</button>        
+    </div>
+    <div class="locked">
+        <hr>
+        <button class="keys" id="saveBtn" type="submit" disabled>Save</button>
+        <button class="stored" id="recallBtn" style="display:none">Recall Key</button>
+    </div>
 </body>
 </html>

@@ -1,0 +1,13 @@
+/* This extension could use more styling */
+html {
+    width: 12em;
+}
+
+.copyKeys button {
+    width: 50%;
+}
+
+img {
+    float: right;
+    width: 5em;
+}
